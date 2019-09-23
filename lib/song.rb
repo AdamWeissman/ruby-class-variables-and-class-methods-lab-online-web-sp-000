@@ -26,9 +26,7 @@ class Song
   end
   
   def self.genre_count
-    new_hash = {}
-    new_hash(0).tap {|h| @@genres.each { |genre| h[genre] += 1 } }
-    return new_hash
+    Hash.new(0).tap {|h| @@genres.each { |genre| h[genre] += 1 } }
   end
   
   def self.artist_count
